@@ -1,8 +1,15 @@
-nav {
+.header {
     width: 100%;
-    margin: 35px;
+    height: 70px;
+    margin: 10px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease-in;
     position: fixed;
+}
+.header-bg{
+    background-color: rgba(255, 255, 255, 0.87);
 }
 /* .logo{
     width: 10%;

@@ -1,8 +1,21 @@
-import './Header.css'
+import React, {useState} from 'react';
+import './Navbar.css';
 
-function  Header()  {
+
+function  Navbar()  {
+
+    //change nav color when scrolling
+    const [color, setColor]= useState(false)
+    const changeColor= ()=>{
+        if (window.scrollY >= 90){
+            setColor(true)
+        }else {
+            setColor(false)
+        }
+    }
+    window.addEventListener("scroll",changeColor)
     return (
-        <nav>
+        <nav className={color ? "header header-bg" : "header"}>
         <div className='logo'> <h1>E T Q .</h1></div>
         <div className='menu-bar'>
             <ul>
@@ -23,4 +36,4 @@ function  Header()  {
     )
 };
 
-export default Header
+export default Navbar;

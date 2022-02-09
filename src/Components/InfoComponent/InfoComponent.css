@@ -1,0 +1,20 @@
+.info-box {
+        display: flex;
+        justify-content: space-around;
+}
+.info-box2{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+.info-box img {
+    width: 50%;   
+}
+.info-div {
+    line-height: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+
+}

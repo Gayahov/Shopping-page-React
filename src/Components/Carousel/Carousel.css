@@ -1,0 +1,78 @@
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+  overflow: hidden;
+}
+
+.frame {
+    width: 400px;
+    height: 520px;
+    overflow: hidden;
+}
+
+.box-container {
+  display: flex;
+}
+
+.box1 {
+    width: 400px;
+    height: 520px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../assets/blacksh2.jpg');
+    
+}
+.box2 {
+    width: 400px;
+    height: 520px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../assets/blacksh1.png');
+    
+  }
+  .box3 {
+    width: 400px;
+    height: 520px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../assets/blacksh3.jpg');
+    
+  }
+
+.button-container {
+  display: flex;
+}
+
+.button {
+  background: #666;
+  color: #fff;
+  width: 50px;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.button-2-container {
+  display: flex;
+}
+
+.button-2 {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background: #E0E0E0;
+  margin: 6px;
+  cursor: pointer;
+}
+
+.active {
+  background: #999;
+}
