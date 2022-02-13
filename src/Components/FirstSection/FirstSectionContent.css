@@ -11,10 +11,13 @@
     align-items: flex-start;
     justify-content: center;
     display: flex;
-    padding: 20px;
+    padding:20px;
     flex-direction: column;
 }
 .main-content {
     line-height: 50px;
     display: flex;
+}
+.test {
+    color: aquamarine;
 }

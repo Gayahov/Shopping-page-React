@@ -30,7 +30,16 @@
 }
 .menu-bar ul li {
     margin-right: 15px;
+    transition: .4s;
+    position: relative;
+    content: "";
+    transition: ease-out 0.5s;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+    transition: .5s;
 }
+
+
 .shopping-cart{
     padding: 10px;
     width: 10px;
@@ -42,3 +51,21 @@
     justify-content: center;
     align-items: center;
 }
+.link:after{
+    content: '';
+    position: absolute;
+    width: 0; height: 1.5px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: rgb(17, 16, 16);
+    transition: width .3s ease;
+    -webkit-transition: width .3s ease;
+  }
+   
+  .link:hover:after{
+    width: 100%;
+    left: 0;
+    background: rgb(3, 3, 3);
+  }
+  

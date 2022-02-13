@@ -13,7 +13,7 @@ function InfoComponent(){
 
     let infoArr = arrInfo.map(item => {
         return (
-            <div className='info-box'>
+            <div className='info-box' key={arrInfo.id}>
                 <img src={item.img} alt={item.header} />
                 <div className='info-div'>
                     <h4>{item.header}</h4>
@@ -23,7 +23,7 @@ function InfoComponent(){
             </div>
         )
     })
-    return(
+    return(  
         <div className='info-box2'>
             {infoArr}
         </div>
