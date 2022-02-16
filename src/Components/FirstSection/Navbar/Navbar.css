@@ -3,6 +3,7 @@
     height: 70px;
     margin: 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     transition: .3s ease-in;
@@ -17,6 +18,7 @@
 .menu-bar {
     padding: 10px;
     width: 90%;
+    align-items: center;
     display: flex;
     justify-content: space-between;
 }
@@ -33,6 +35,7 @@
     transition: .4s;
     position: relative;
     content: "";
+    margin-top: 5px;
     transition: ease-out 0.5s;
     -webkit-transition: ease-out 0.5s;
     -moz-transition: ease-out 0.5s;
@@ -54,12 +57,13 @@
 .link:after{
     content: '';
     position: absolute;
-    width: 0; height: 1.5px;
+    width: 0; 
+    height: 1.8px;
     display: block;
     margin-top: 5px;
     right: 0;
     background: rgb(17, 16, 16);
-    transition: width .3s ease;
+    transition: width .3s ease-in;
     -webkit-transition: width .3s ease;
   }
    
@@ -68,4 +72,8 @@
     left: 0;
     background: rgb(3, 3, 3);
   }
-  
+  .search_input{
+    height: 250px;
+    background-color: white;
+    align-items: flex-start;
+  }

@@ -24,9 +24,9 @@ const Carousel = () => {
       <div className='wrapper'>
         <div className='frame'>
           <div className='box-container' ref={ref}>
-            <div className='box'><img src={require("../assets/blacksh2.jpg")}></img></div>
-            <div className='box'><img src={require("../assets/blacksh1.png")}></img></div>
-            <div className='box'><img src={require("../assets/blacksh3.jpg")}></img></div>
+            <div className='box'><img src={require("../../assets/blacksh2.jpg")}></img></div>
+            <div className='box'><img src={require("../../assets/blacksh1.png")}></img></div>
+            <div className='box'><img src={require("../../assets/blacksh3.jpg")}></img></div>
           </div>
         </div>
         <div className='button-container'>

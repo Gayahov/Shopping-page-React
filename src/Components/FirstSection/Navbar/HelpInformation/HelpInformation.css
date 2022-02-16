@@ -1,0 +1,40 @@
+.help-container{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    justify-content: space-around;
+
+}
+
+.info-item {
+    margin-right: 15px;
+    transition: .4s;
+    position: relative;
+    content: "";
+    list-style: none;
+    display: flex;
+    margin-top: 5px;
+    transition: ease-out 0.5s;
+    -webkit-transition: ease-out 0.5s;
+    -moz-transition: ease-out 0.5s;
+    transition: .5s;
+
+}
+.text-underlined:after{
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 1.8px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: rgb(17, 16, 16);
+    transition: width .3s ease-in;
+    -webkit-transition: width .3s ease;
+  }
+   
+  .text-underlined:hover:after{
+    width: 100%;
+    left: 0;
+    background: rgb(3, 3, 3);
+  }

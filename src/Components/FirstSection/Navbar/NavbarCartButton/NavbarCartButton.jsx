@@ -1,12 +1,10 @@
-function NavbarCartButton(){
-    return(
-        <button>
-            <span></span>
-            <span></span>
-            <span></span>
-        
-        
-        </button>
-    )
+function NavbarCartButton() {
+  return (
+    <button>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  );
 }
-export default NavbarCartButton; 
+export default NavbarCartButton;

@@ -1,26 +1,15 @@
-.overyal{
-    position: relative;
-    background-color: aliceblue;
+.navbarsearch {
+  width: 100%;
+  display: flex;
+  align-items: self-start;
+  
 }
 
-.navbarsearch{
-left: 0%;
-width: 118rem;
-height: 200px;
-background: rebeccapurple;
-position: absolute;
-top: 10%;
-margin: 15px;
-}
-
-.search{
-width: 80%;
-padding: 20px;
-position: absolute;
-top: 50%;
-margin: 15px;
-border: none;
-background: no-repeat;
-font-size: 30px;
-color: black;
+.search {
+  background: none;
+  width: 100%;
+  padding: 25px;
+  border: none;
+  font-size: 30px;
+  color: black;
 }

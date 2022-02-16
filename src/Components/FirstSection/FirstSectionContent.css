@@ -1,5 +1,5 @@
 .main-pic {
-    background-image:url("../assets/12.jpg") ; 
+    background-image:url("../../assets/12.jpg") ; 
     height: 100vh;
     width: 75vw;
     background-position: center;
@@ -11,13 +11,11 @@
     align-items: flex-start;
     justify-content: center;
     display: flex;
+    line-height: 50px;
     padding:20px;
     flex-direction: column;
 }
 .main-content {
-    line-height: 50px;
+    
     display: flex;
-}
-.test {
-    color: aquamarine;
 }
