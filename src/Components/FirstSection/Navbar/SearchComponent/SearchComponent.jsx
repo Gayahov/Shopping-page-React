@@ -1,7 +1,7 @@
 
-import './NavbarSearch.css';
+import './Searchcomponent.css';
 
-function NavbarSearch(){
+function SearchComponent(){
     return(
        
         <div className='navbarsearch'>
@@ -10,4 +10,4 @@ function NavbarSearch(){
         
     )
 }
-    export default NavbarSearch;
+    export default SearchComponent;

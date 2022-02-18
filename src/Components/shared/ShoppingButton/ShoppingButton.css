@@ -1,0 +1,9 @@
+.shopping-button {
+    background-color: black;
+    width: 100px;
+    height: 40px;
+    color: white;
+    text-align: center;
+    border: none;
+    padding: 10px;
+}

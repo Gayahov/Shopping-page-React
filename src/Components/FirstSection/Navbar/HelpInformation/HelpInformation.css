@@ -1,9 +1,11 @@
 .help-container{
     display: flex;
     width: 100%;
+    padding: 30px;
     background-color: white;
     justify-content: space-around;
-
+    transition: ease-out 0.5s;
+    
 }
 
 .info-item {
@@ -12,7 +14,6 @@
     position: relative;
     content: "";
     list-style: none;
-    display: flex;
     margin-top: 5px;
     transition: ease-out 0.5s;
     -webkit-transition: ease-out 0.5s;
@@ -37,4 +38,10 @@
     width: 100%;
     left: 0;
     background: rgb(3, 3, 3);
+  }
+  .width-30{
+      width: 30%;
+  }
+  .help-header {
+      padding-bottom: 15px;
   }

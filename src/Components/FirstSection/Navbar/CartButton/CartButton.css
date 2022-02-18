@@ -1,0 +1,17 @@
+.cart-info{
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+    border-bottom: 1px solid #9d949459;
+}
+.cart-information{
+    width: 100%;
+    transition: 0.3s ease-in;
+    
+}
+.cart-buttonbox{
+    display: flex;
+    padding: 10px;
+    justify-content: flex-end;
+}
+

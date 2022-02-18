@@ -1,0 +1,13 @@
+.account-description {
+  width: 100%;
+  font-size: 12px;
+  padding: 15px;
+  transition: 0.3s ease-in;
+}
+.button_container {
+  display: flex;
+  padding: 15px;
+  justify-content: space-around;
+  padding: 15px;
+  margin: 5px;
+}

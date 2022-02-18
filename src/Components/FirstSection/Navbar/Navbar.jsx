@@ -1,7 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
+import CartButton from "./CartButton/CartButton";
 import HelpInformation from "./HelpInformation/HelpInformation";
+import MyAccount from "./MyAccount/MyAccount";
 import "./Navbar.css";
-import NavbarSearch from "./NavbarSerach/NavbarSearch";
+import SearchComponent from "./SearchComponent/SearchComponent";
 
 function Navbar() {
   const [color, setColor] = useState(false);
@@ -15,56 +17,84 @@ function Navbar() {
       setColor(false);
     }
   };
-  window.addEventListener("scroll", changeColor);
 
-  const [open, setOpen] = useState(false);
-  const container = useRef(null);
-  
-//   const handleClickOutside = event => {
-//     if (container.current && !container.current.contains(event.target)) {
-//       setOpen(false);
-//     }
-//   };
+  useEffect(() => {
+    window.addEventListener("scroll", changeColor);
+    return () => {
+      window.removeEventListener("scroll", changeColor);
+    };
+  }, []);
 
-// //   useEffect(() => {
-// //     document.addEventListener("mousedown", handleClickOutside);
+  const [openHeader, setOpenHeader] = useState(false);
+  const [headerContent, setHeaderContent] = useState(null);
+  const [openMyAccount, setOpenMyAccount] = useState(false);
+  const [accountContent, setAccountContent] = useState(false);
 
-// //     return () => {
-// //       // clean up
-// //       document.removeEventListener("mousedown", handleClickOutside);
-// //     };
-//   });
-
+  const headerContentChange = (content) => () => {
+    setHeaderContent(content);
+    if (content === headerContent) {
+      setOpenHeader(!openHeader);
+    }
+  };
+  const accountContentChange = (content) => () => {
+    setAccountContent(content);
+    if (content === accountContent) {
+      setOpenMyAccount(!openMyAccount);
+    }
+  };
+ 
   return (
-    <div className={open ? "header search_input": "header "}>
-      <nav ref={navEl} className={color ? "header header-bg" : "header"} >
-        <div className="logo">
-          <h1>E T Q .</h1>
-        </div>
+    <div className={openHeader ? "header search_input" : "header "}>
+      <nav ref={navEl} className={color ? "header header-bg" : "header"}>
         <div className="menu-bar">
-          <ul>
-            <li className="link">Shop All</li>
-            <li className="link">Sale</li>
-            <li className="link">Shoecare</li>
-          </ul>
-          <ul>
-            <li className="link" onClick={() => setOpen(!open)} >
-              Search
-            </li>
-            
-            <li className="link">Help</li>
-            <li className="link">My account</li>
-            <div className="shopping-cart">
-              <p>0</p>
-            </div>
-          </ul>
+          <div className="page-information">
+            <h1 className="logo">E T Q .</h1>
+            <ul>
+              <li className="link">Shop All</li>
+              <li className="link">Sale</li>
+              <li className="link">Shoecare</li>
+            </ul>
+          </div>
+          <div
+            className={
+              openMyAccount ? "account-section height" : "account-section"
+            }
+          >
+            <ul>
+              <li className="link" onClick={headerContentChange("search")}>
+                Search
+              </li>
+
+              <li className="link" onClick={headerContentChange("help")}>
+                Help
+              </li>
+              <li className="link" onClick={accountContentChange("my_account")}>
+                My account
+              </li>
+              <div
+                className="shopping-cart"
+                onClick={accountContentChange("cart_btn")}
+              >
+                <p>0</p>
+              </div>
+            </ul>
+            {openMyAccount ? (
+              accountContent === "my_account" ? (
+                <MyAccount />
+              ) : accountContent === "cart_btn" ? (
+                <CartButton />
+              ) : null
+            ) : null}
+          </div>
         </div>
-        {open && (
-        <NavbarSearch ref={container}></NavbarSearch>
-      )}
-      <HelpInformation></HelpInformation>
+        {openHeader ? (
+          headerContent === "search" ? (
+            <SearchComponent />
+          ) : headerContent === "help" ? (
+            <HelpInformation />
+          ) : null
+        ) : null}
       </nav>
-     
     </div>
   );
 }
