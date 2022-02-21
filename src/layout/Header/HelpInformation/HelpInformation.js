@@ -1,5 +1,5 @@
 import "./HelpInformation.css";
-import { information, contact, faq } from "../../../../constats/help.constants";
+import { information, contact, faq } from "../../../constats/help.constants";
 
 function HelpInformation() {
   return (

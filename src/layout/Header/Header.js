@@ -2,10 +2,10 @@ import React, { useState, useRef, useEffect } from "react";
 import CartButton from "./CartButton/CartButton";
 import HelpInformation from "./HelpInformation/HelpInformation";
 import MyAccount from "./MyAccount/MyAccount";
-import "./Navbar.css";
 import NavbarSearch from "./NavbarSearch/NavbarSearch";
+import "./Header.css"
 
-function Navbar() {
+function Header() {
   const [color, setColor] = useState(false);
   const navEl = useRef();
   //change nav color when scrolling
@@ -113,4 +113,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Header;

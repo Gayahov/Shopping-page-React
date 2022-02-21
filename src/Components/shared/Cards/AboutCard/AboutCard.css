@@ -1,0 +1,18 @@
+.info-box {
+    display: flex;
+    padding: 15px;
+   
+}
+
+.info-box img {
+width: 50%; 
+margin-right: 10px;  
+}
+.info-div {
+line-height: 50px;
+justify-content: center;
+align-items: flex-start;
+display: flex;
+flex-direction: column;
+
+}

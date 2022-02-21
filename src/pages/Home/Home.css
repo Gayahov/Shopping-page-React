@@ -1,3 +1,8 @@
+.home-page-info {
+    display: flex;
+    margin-bottom: 20px;
+}
+
 .main-pic {
     background-image:url("../../assets/12.jpg") ; 
     height: 100vh;
@@ -11,11 +16,12 @@
     align-items: flex-start;
     justify-content: center;
     display: flex;
+    flex-direction: column;
     line-height: 50px;
     padding:20px;
-    flex-direction: column;
 }
-.main-content {
-    
+
+.about {
     display: flex;
+    justify-content: flex-start;
 }

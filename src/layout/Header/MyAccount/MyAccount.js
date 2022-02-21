@@ -1,5 +1,5 @@
-import Button from "../../../shared/Button/Button";
-import ShoppingButton from "../../../shared/ShoppingButton/ShoppingButton";
+import Button from "../../../Components/shared/Button/Button";
+import ShoppingButton from "../../../Components/shared/ShoppingButton/ShoppingButton";
 import "./MyAccount.css"
 
 function MyAccount(){

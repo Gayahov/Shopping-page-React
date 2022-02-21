@@ -1,4 +1,4 @@
-import ShoppingButton from "../../../shared/ShoppingButton/ShoppingButton";
+import ShoppingButton from "../../../Components/shared/ShoppingButton/ShoppingButton";
 import "./CartButton.css"
 
 function CartButton() {
