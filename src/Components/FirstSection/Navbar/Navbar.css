@@ -7,13 +7,15 @@
   justify-content: center;
   align-items: center;
   transition: 0.3s ease-in;
+  white-space: nowrap;
   position: fixed;
 }
 .header-bg {
   background-color: rgba(255, 255, 255, 0.87);
 }
 .logo {
-  margin-right: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
 .menu-bar {
   padding: 10px;
@@ -23,6 +25,7 @@
   justify-content: space-between;
 }
 .menu-bar ul {
+    padding: 10px;
   margin-left: 10px;
   display: flex;
   list-style: none;

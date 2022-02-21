@@ -3,12 +3,13 @@ import CartButton from "./CartButton/CartButton";
 import HelpInformation from "./HelpInformation/HelpInformation";
 import MyAccount from "./MyAccount/MyAccount";
 import "./Navbar.css";
-import SearchComponent from "./SearchComponent/SearchComponent";
+import NavbarSearch from "./NavbarSearch/NavbarSearch";
 
 function Navbar() {
   const [color, setColor] = useState(false);
   const navEl = useRef();
   //change nav color when scrolling
+
   const changeColor = () => {
     navEl.current.focus();
     if (window.scrollY >= 90) {
@@ -29,20 +30,37 @@ function Navbar() {
   const [headerContent, setHeaderContent] = useState(null);
   const [openMyAccount, setOpenMyAccount] = useState(false);
   const [accountContent, setAccountContent] = useState(false);
+  const headerContentRef = useRef();
+  const accountContentRef = useRef();
 
+  headerContentRef.current = headerContent;
+  console.log(openHeader);
+
+  /////// open
   const headerContentChange = (content) => () => {
-    setHeaderContent(content);
-    if (content === headerContent) {
+    setHeaderContent(content); // help
+    headerContentRef.current = content; //help
+    if (content === headerContentRef.current) {
       setOpenHeader(!openHeader);
+      setOpenMyAccount(false);
+    }
+    if (content !== headerContent) {
+      setOpenHeader(true);
     }
   };
+
   const accountContentChange = (content) => () => {
     setAccountContent(content);
-    if (content === accountContent) {
+    accountContentRef.current = content;
+    if (content === accountContentRef.current) {
       setOpenMyAccount(!openMyAccount);
+      setOpenHeader(false);
+    }
+    if (content !== accountContent) {
+      setOpenMyAccount(true);
     }
   };
- 
+
   return (
     <div className={openHeader ? "header search_input" : "header "}>
       <nav ref={navEl} className={color ? "header header-bg" : "header"}>
@@ -55,11 +73,7 @@ function Navbar() {
               <li className="link">Shoecare</li>
             </ul>
           </div>
-          <div
-            className={
-              openMyAccount ? "account-section height" : "account-section"
-            }
-          >
+          <div className={openMyAccount ? "account-section height" : "account-section"}>
             <ul>
               <li className="link" onClick={headerContentChange("search")}>
                 Search
@@ -89,7 +103,7 @@ function Navbar() {
         </div>
         {openHeader ? (
           headerContent === "search" ? (
-            <SearchComponent />
+            <NavbarSearch />
           ) : headerContent === "help" ? (
             <HelpInformation />
           ) : null

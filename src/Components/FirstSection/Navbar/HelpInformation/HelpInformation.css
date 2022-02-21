@@ -2,10 +2,9 @@
     display: flex;
     width: 100%;
     padding: 30px;
-    background-color: white;
     justify-content: space-around;
-    transition: ease-out 0.5s;
-    
+    transition: width 3s ease-in;
+    -webkit-transition: width 3s ease;
 }
 
 .info-item {
