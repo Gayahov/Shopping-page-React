@@ -25,3 +25,31 @@
     display: flex;
     justify-content: flex-start;
 }
+.fav-description {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 700;
+
+}
+.favorite_models{
+    padding: 20px;
+    margin: 10px;
+}
+.store-img {
+    margin: 10px;
+}
+.about-store{
+    display: flex;
+    margin-bottom: 30px;
+}
+.store-img img {
+    width: 100%;
+    height: 630px;
+    margin: 10px;
+}
+.store-info {
+    padding: 10px;
+}
+.store-info h4 {
+    margin: 5px;
+}

@@ -1,0 +1,15 @@
+.footer-container{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    margin: 20px;
+    font-size: 14px;
+}
+.footer-container div {
+    width: 20%;
+    margin-right: 20px;
+    padding: 15px;
+}
+.help-header-p {
+    margin-bottom: 10px;
+}

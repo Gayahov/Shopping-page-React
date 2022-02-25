@@ -1,4 +1,13 @@
-.slick_content {
+/* .slick_content {
     display: flex;
 
+}
+.slick-slider {
+    display: flex;
+}
+.left-arrow{
+    position: absolute;
+} */
+.test{
+    background-color: brown !important;
 }

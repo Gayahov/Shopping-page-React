@@ -1,0 +1,35 @@
+.slick-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.left-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+.slick-prev {
+    left: 20px;
+}
+.slick-next {
+    right: 35%;
+}
+
+
+.slick-disabled-arrow {
+    display: none;
+}

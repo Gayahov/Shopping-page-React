@@ -9,6 +9,7 @@
     transition: 0.3s ease-in;
     white-space: nowrap;
     position: fixed;
+    z-index: 999;
   }
   .header-bg {
     background-color: rgba(255, 255, 255, 0.87);
@@ -100,3 +101,17 @@
       margin: 10px;
       border-bottom: 1px solid #9d949459;
   }
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49, 49, 49, 0.863);
+}
+

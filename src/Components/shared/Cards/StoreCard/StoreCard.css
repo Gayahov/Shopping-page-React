@@ -1,0 +1,9 @@
+.about-store{
+    display: flex;
+    flex-direction: row;
+
+}
+.store-img{
+    display: flex;
+    flex-direction: column;
+}

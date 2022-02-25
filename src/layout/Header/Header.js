@@ -62,6 +62,7 @@ function Header() {
   };
 
   return (
+      
     <div className={openHeader ? "header search_input" : "header "}>
       <nav ref={navEl} className={color ? "header header-bg" : "header"}>
         <div className="menu-bar">
@@ -94,18 +95,31 @@ function Header() {
             </ul>
             {openMyAccount ? (
               accountContent === "my_account" ? (
+                  <>
                 <MyAccount />
+                  <div className="overlay" onClick={accountContentChange("my_account")}></div>
+                    </>
               ) : accountContent === "cart_btn" ? (
+                  <>
                 <CartButton />
+                <div className="overlay"  onClick={accountContentChange("cart_btn")}></div>
+                
+                </>
               ) : null
             ) : null}
           </div>
         </div>
         {openHeader ? (
           headerContent === "search" ? (
+              <>
             <NavbarSearch />
+            <div className="overlay"  onClick={accountContentChange("search")}></div>
+            </>
           ) : headerContent === "help" ? (
+              <>
+              <div className="overlay"  onClick={accountContentChange("help")}></div>
             <HelpInformation />
+            </>
           ) : null
         ) : null}
       </nav>

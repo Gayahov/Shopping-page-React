@@ -2,6 +2,7 @@ import "./AboutCard.css"
 import Button from "../../Button/Button";
 import { arrInfo } from "../../../../constats/about.constant";
 
+
 export default function AboutCard({img, header, info }) {
     return (
         <div className="info-box" key={arrInfo.id}>
